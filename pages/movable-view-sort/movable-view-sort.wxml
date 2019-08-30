@@ -1,0 +1,27 @@
+<view class="g-doc">
+  <view class="g-bd">
+    <view class="layer-top"></view>
+    <view class="m-drag">
+      <movable-area style="height: {{movableViewHeight}}px;" class="drag-area">
+        <block wx:for="{{dataList}}">
+          <!-- disabled="{{ !isLongPress }}" -->
+          <movable-view class="drag-item  {{isLongPress && activeIndex == index ?'drag-press':'' }}" style="height: {{height}}px;" y="{{ item.y }}" direction="vertical" animation="true" bindtouchstart="touchstart" bindtouchmove="touchmove" bindtouchend="touchend"
+            disabled="{{ !isLongPress }}" bindlongpress="longpress" data-index="{{ index }} " data-item="{{item}}">
+            <view class="weui-cells m-list" catchtap="pageTo">
+              <view class="weui-cell">
+                <view class="weui-cell__bd">
+                  {{item.lockGroupName}}
+                </view>
+                <view class="weui-cell__ft">
+                  <icon type="info" size="30"  />
+                </view>
+              </view>
+            </view>
+
+          </movable-view>
+        </block>
+      </movable-area>
+    </view>
+    <view class="layer-bottom"></view>
+  </view>
+</view>

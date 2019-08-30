@@ -1,0 +1,59 @@
+<view class="g-doc">
+
+  <view class="g-bd">
+    <scroll-view scroll-y="{{ !isLongPress }}" class="m-scroll-view">
+
+      <view class="m-drag">
+        <!-- <movable-area style="height: {{movableViewHeight}}px;" class="drag-area">
+        <movable-view class="drag-view " style="height: {{height}}px;" out-of-bounds="true" direction="vertical" animation="true" y="{{ dragItem.y }}">
+          <view class="weui-cells">
+            <view class="weui-cell">
+              <view class="weui-cell__bd">
+               {{ dragItem.lockGroupName }}
+              </view>
+              <view class="weui-cell__ft">{{ dragItem.index }}</view>
+            </view>
+          </view>
+        </movable-view>
+      </movable-area>  -->
+        <view style="height: {{movableViewHeight}}px;" class="drag-area">
+          <!-- <block wx:if="{{isLongPress}}">
+          <view class="drag-item acitve" style="height: {{height}}px;top:{{dragItem.y}}px;" direction="vertical" bindtouchstart="touchstart" bindtouchmove="touchmove" bindtouchend="touchend" bindlongpress="longpress" data-index="{{ dragItem.index }} " data-item="{{dragItem}}">
+            <view class="weui-cells m-list">
+              <view class="weui-cell">
+                <view class="weui-cell__bd" style="color:red">
+                  {{dragItem.lockGroupName}}
+                </view>
+                <view class="weui-cell__ft">{{ dragItem.index }}</view>
+              </view>
+            </view>
+          </view>
+        </block> -->
+
+          <block wx:for="{{dataList}}">
+            <view class="drag-item {{ activeIndex == index && isLongPress?'drag-press':''}}  {{fIndex!=-1 && index!= activeIndex ?'animation':'' }}" style="height: {{height}}px;top:{{item.y}}px;" bindtouchstart="touchstart" bindtouchmove="touchmove" bindtouchend="touchend"
+              bindlongpress="longpress" data-index="{{ index }} " data-item="{{item}}">
+              <view class="weui-cells m-list" catchtap="pageTo">
+                <view class="weui-cell">
+                  <view class="weui-cell__bd">
+                    {{item.lockGroupName}}
+                  </view>
+                  <view class="weui-cell__ft">
+                    <icon type="info" size="30" />
+                  </view>
+                </view>
+              </view>
+            </view>
+
+          </block>
+        </view>
+      </view>
+
+    </scroll-view>
+    <view class="layer-bottom"></view>
+
+  </view>
+  <view class="g-ft">
+    <button class="weui-btn" type="default" bindtap="submit">完成</button>
+  </view>
+</view>

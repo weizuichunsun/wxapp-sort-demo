@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "index/index",
+    "pages/movable-view-sort/movable-view-sort",
+    "pages/view-sort/view-sort"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

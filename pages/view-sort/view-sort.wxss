@@ -1,0 +1,106 @@
+.g-doc, page {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+ 
+.g-doc {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+
+}
+
+
+.layer-top {
+  height: 50px;
+}
+ 
+.layer-bottom {
+  height: 50px;
+}
+ 
+.g-bd {
+
+  width: 100%;
+ 
+  position: absolute;
+
+  top: 0;
+  bottom: 50px;
+
+
+}
+ 
+.g-ft {
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+}
+
+
+
+
+.m-drag {
+  width: 100%;
+}
+
+.m-drag .drag-area {
+  width: 100%;
+  min-height: 50px;
+  background-color: #ddd;
+  position: relative;
+}
+.m-drag .drag-view {
+  width: 100%;
+  background-color: #e64340;
+}
+.m-drag .drag-item {
+  width: 100%;
+
+  position: absolute;
+  z-index: 1;
+
+  /* item.y */
+}
+
+.weui-cells {
+  /* background-color: #e64340; */
+  margin: 0;
+}
+
+
+.weui-cell {
+  padding: 0 40rpx;
+  height: 50px;
+}
+
+.m-drag .drag-press {
+  box-shadow: 1px 1px 3px #000000;
+  z-index: 999;
+  position: absolute;
+
+}
+.m-drag .acitve .weui-cells {
+  padding: 0 40rpx;
+  background-color: blueviolet;
+  height: 50px;
+}
+
+.drag-options{
+  opacity: 0;
+     
+}
+.animation{
+  transition: 0.1s;
+}
+
+
+
+
+
+.m-scroll-view{
+  width: 100%;
+  height: 100%;
+}

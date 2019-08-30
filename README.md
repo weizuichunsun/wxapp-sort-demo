@@ -10,3 +10,6 @@ https://developers.weixin.qq.com/s/EvfEX0mj7Ub8
 提供两种方案，一种修改 movable-view  中的 y 作为变量
 
 一种通过绝对定位，修改 top 做为变量。
+
+
+![image](https://github.com/weizuichunsun/wxapp-sort-demo/blob/master/images/x1.png?raw=true)
